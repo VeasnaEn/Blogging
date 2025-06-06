@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300900;1,300900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <title>Blogging</title>
+</head>
+<body class="font-rubik">
+        <!-- ==============  Navigation bar =================== -->
+
+        <header class="max-w-full shadow-sm">
+                 <div class="flex items-center justify-between w-10/12 mx-auto">
+                            <div class="w-32 h-auto">
+                                    <img class="object-cover w-full h-full" src="/img/logo1.png" alt="">
+                            </div>
+
+                            <!-- ========== Mobile menu ============ -->
+
+                            <div id="mobile_nav" class="absolute flex-col hidden w-4/6 h-auto p-4 space-y-4 bg-white rounded-md shadow-lg top-20 left-20">
+                                    <a href="" class="px-2 py-1 transition-all rounded-md hover:bg-green-500 hover:text-white">Home</a>
+                                    <a href="" class="px-2 py-1 transition-all rounded-md hover:bg-green-500 hover:text-white">Blog</a>
+                                    <a href="" class="px-2 py-1 transition-all rounded-md hover:bg-green-500 hover:text-white">Contact</a>
+                                    <a href="" class="px-2 py-1 transition-all rounded-md hover:bg-green-500 hover:text-white">About</a>
+                                    <a href="" class="w-full py-1 text-center text-white rounded-full bg-gradient-to-r from-green-400 to-green-500">Login</a>
+                            </div>
+
+                            <!-- Desktop Menu-->
+                            <div class="hidden md:flex text-md md:space-x-8 ">
+                                <a href="" class="px-2 py-1 transition-all transform rounded-md hover:bg-green-500 hover:text-white hover:scale-125">Home</a>
+                                    <a href="" class="px-2 py-1 transition-all transform rounded-md hover:bg-green-500 hover:text-white hover:scale-125">Blog</a>
+                                    <a href="" class="px-2 py-1 transition-all transform rounded-md hover:bg-green-500 hover:text-white hover:scale-125">Contact</a>
+                                    <a href="" class="px-2 py-1 transition-all transform rounded-md hover:bg-green-500 hover:text-white hover:scale-125">About</a>
+                            </div>
+
+                            <div class="flex space-x-4">
+                                    <button onclick="toggleMenu()" class="inline-block p-2 rounded-md hover:bg-gray-300 focus:ring-2 md:hidden">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                                        </svg>                                          
+                                    </button>
+                                    <button class="px-4 py-2 space-x-2 text-white transition duration-300 transform rounded-full bg-gradient-to-r from-green-400 to-green-500 hover:ring-2 ring-green-600 active:scale-110 text-md md:px-8 ">Login</button>
+                            </div>
+                 </div>
+        </header>
+
+        <section id="hero-section" class="mb-4">
+                <div class="max-w-6xl px-4 py-8 mx-auto space-y-8 md:flex md:items-center md:py-4 md:px-2">
+                        <div class="space-y-8 text-center md:text-left md:w-1/2 md:space-y-10">
+                                <div id="hero_content" class="space-y-4">
+                                     <h1 class="text-4xl font-bold md:text-5xl">Welcome To Our Blog</h1>
+                                     <p class="text-sm text-gray-700 md:text-xl">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, nesciunt necessitatibus mollitia possimus corporis inventore!
+                                     </p>
+                                </div>
+
+                                <div class="flex justify-center md:justify-start md:space-x-4">
+                                     <input type="text" class="px-4 py-2 border-none rounded-full ring-1 focus:ring-2 focus:outline-none ring-green-500 placeholder:text-sm" placeholder="Quick Search.">
+                                     <button class="hidden px-4 space-x-2 text-sm text-white rounded-full md:flex md:justify-center md:items-center bg-gradient-to-r from-green-400 to-green-500 hover:ring-2 ring-green-400">
+                                          <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                                <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+                                              </svg>                                              
+                                          </span>
+
+                                          <span>Search</span>
+                                     </button>
+                                </div>
+                        </div>
+
+                        <div class="w-[80%] mx-auto h-auto md:w-1/2">
+                                <img class="object-cover w-full h-full" src="/img/01.png" alt="">
+                        </div>
+                </div>
+        </section>
+
+        <!-- ======================== Blog Section =============-->
+
+        <section id="blog-section" class="mb-4">
+               <div class="max-w-6xl py-8 mx-auto space-y-16">
+                    <div class="space-y-4">
+                            <div class="flex justify-between px-2">
+                                    <p class="text-xl font-semibold">Popular Post</p>
+                                    <p><a href="" class="text-green-500 underline">More</a></p>
+                            </div>
+                            <div class="grid grid-cols-1 gap-4 m-5 md:grid-cols-2 lg:grid-cols-4 md:m-0">
+                                    <div class="w-full p-2 space-y-4 transition duration-300 transform border-2 rounded-lg shadow-md h-96 hover:cursor-pointer hover:scale-105 hover:border-green-500">
+                                         <div class="w-full overflow-hidden rounded h-1/2">
+                                                <img class="object-cover w-full h-full" src="/img/blog_01.png" alt="">
+                                         </div>
+                                         <div class="px-1 space-y-2">
+                                                <p class="text-lg font-bold line-clamp-2">
+                                                    Earth's intelligence: Being pulled toward the heart of the world
+                                                </p>
+                                                <p class="text-sm line-clamp-3">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veniam autem. Officiis rem 
+                                                    adipisci repellendus, dolorum autem, nihil, ad earum vitae ipsum
+                                                    repellat voluptatum sint incidunt veniam necessitatibus a 
+                                                    placeat vel odit ullam laudantium! Tempore quae amet debitis
+                                                    eius impedit voluptatum officiis necessitatibus! Iste aperiam
+                                                    facere necessitatibus dicta ab quam.
+                                                </p>
+                                                <p>
+                                                    Oct, 4, 2023
+                                                </p>
+                                         </div>
+                                    </div>
+
+                                    <div class="w-full p-2 space-y-4 transition duration-300 transform border-2 rounded-lg shadow-md h-96 hover:cursor-pointer hover:scale-105 hover:border-green-500">
+                                        <div class="w-full overflow-hidden rounded h-1/2">
+                                               <img class="object-cover w-full h-full" src="/img/blog_01.png" alt="">
+                                        </div>
+                                        <div class="px-1 space-y-2">
+                                               <p class="text-lg font-bold line-clamp-2">
+                                                   Earth's intelligence: Being pulled toward the heart of the world
+                                               </p>
+                                               <p class="text-sm line-clamp-3">
+                                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veniam autem. Officiis rem 
+                                                   adipisci repellendus, dolorum autem, nihil, ad earum vitae ipsum
+                                                   repellat voluptatum sint incidunt veniam necessitatibus a 
+                                                   placeat vel odit ullam laudantium! Tempore quae amet debitis
+                                                   eius impedit voluptatum officiis necessitatibus! Iste aperiam
+                                                   facere necessitatibus dicta ab quam.
+                                               </p>
+                                               <p>
+                                                   Oct, 4, 2023
+                                               </p>
+                                        </div>
+                                   </div>
+
+                                   <div class="w-full p-2 space-y-4 transition duration-300 transform border-2 rounded-lg shadow-md h-96 hover:cursor-pointer hover:scale-105 hover:border-green-500">
+                                    <div class="w-full overflow-hidden rounded h-1/2">
+                                           <img class="object-cover w-full h-full" src="/img/blog_01.png" alt="">
+                                    </div>
+                                    <div class="px-1 space-y-2">
+                                           <p class="text-lg font-bold line-clamp-2">
+                                               Earth's intelligence: Being pulled toward the heart of the world
+                                           </p>
+                                           <p class="text-sm line-clamp-3">
+                                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veniam autem. Officiis rem 
+                                               adipisci repellendus, dolorum autem, nihil, ad earum vitae ipsum
+                                               repellat voluptatum sint incidunt veniam necessitatibus a 
+                                               placeat vel odit ullam laudantium! Tempore quae amet debitis
+                                               eius impedit voluptatum officiis necessitatibus! Iste aperiam
+                                               facere necessitatibus dicta ab quam.
+                                           </p>
+                                           <p>
+                                               Oct, 4, 2023
+                                           </p>
+                                    </div>
+                               </div>
+
+                               <div class="w-full p-2 space-y-4 transition duration-300 transform border-2 rounded-lg shadow-md h-96 hover:cursor-pointer hover:scale-105 hover:border-green-500">
+                                <div class="w-full overflow-hidden rounded h-1/2">
+                                       <img class="object-cover w-full h-full" src="/img/blog_01.png" alt="">
+                                </div>
+                                <div class="px-1 space-y-2">
+                                       <p class="text-lg font-bold line-clamp-2">
+                                           Earth's intelligence: Being pulled toward the heart of the world
+                                       </p>
+                                       <p class="text-sm line-clamp-3">
+                                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veniam autem. Officiis rem 
+                                           adipisci repellendus, dolorum autem, nihil, ad earum vitae ipsum
+                                           repellat voluptatum sint incidunt veniam necessitatibus a 
+                                           placeat vel odit ullam laudantium! Tempore quae amet debitis
+                                           eius impedit voluptatum officiis necessitatibus! Iste aperiam
+                                           facere necessitatibus dicta ab quam.
+                                       </p>
+                                       <p>
+                                           Oct, 4, 2023
+                                       </p>
+                                </div>
+                           </div>
+
+                            </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between px-2">
+                            <p class="text-xl font-semibold">Latest Post</p>
+                            <p><a href="" class="text-green-500 underline">More</a></p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4 m-5 md:grid-cols-2 lg:grid-cols-4 md:m-0">
+                            <div class="w-full p-2 space-y-4 transition duration-300 transform border-2 rounded-lg shadow-md h-96 hover:cursor-pointer hover:scale-105 hover:border-green-500">
+                                 <div class="w-full overflow-hidden rounded h-1/2">
+                                        <img class="object-cover w-full h-full" src="/img/blog_01.png" alt="">
+                                 </div>
+                                 <div class="px-1 space-y-2">
+                                        <p class="text-lg font-bold line-clamp-2">
+                                            Earth's intelligence: Being pulled toward the heart of the world
+                                        </p>
+                                        <p class="text-sm line-clamp-3">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veniam autem. Officiis rem 
+                                            adipisci repellendus, dolorum autem, nihil, ad earum vitae ipsum
+                                            repellat voluptatum sint incidunt veniam necessitatibus a 
+                                            placeat vel odit ullam laudantium! Tempore quae amet debitis
+                                            eius impedit voluptatum officiis necessitatibus! Iste aperiam
+                                            facere necessitatibus dicta ab quam.
+                                        </p>
+                                        <p>
+                                            Oct, 4, 2023
+                                        </p>
+                                 </div>
+                            </div>
+
+                            <div class="w-full p-2 space-y-4 transition duration-300 transform border-2 rounded-lg shadow-md h-96 hover:cursor-pointer hover:scale-105 hover:border-green-500">
+                                <div class="w-full overflow-hidden rounded h-1/2">
+                                       <img class="object-cover w-full h-full" src="/img/blog_01.png" alt="">
+                                </div>
+                                <div class="px-1 space-y-2">
+                                       <p class="text-lg font-bold line-clamp-2">
+                                           Earth's intelligence: Being pulled toward the heart of the world
+                                       </p>
+                                       <p class="text-sm line-clamp-3">
+                                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veniam autem. Officiis rem 
+                                           adipisci repellendus, dolorum autem, nihil, ad earum vitae ipsum
+                                           repellat voluptatum sint incidunt veniam necessitatibus a 
+                                           placeat vel odit ullam laudantium! Tempore quae amet debitis
+                                           eius impedit voluptatum officiis necessitatibus! Iste aperiam
+                                           facere necessitatibus dicta ab quam.
+                                       </p>
+                                       <p>
+                                           Oct, 4, 2023
+                                       </p>
+                                </div>
+                           </div>
+
+                           <div class="w-full p-2 space-y-4 transition duration-300 transform border-2 rounded-lg shadow-md h-96 hover:cursor-pointer hover:scale-105 hover:border-green-500">
+                            <div class="w-full overflow-hidden rounded h-1/2">
+                                   <img class="object-cover w-full h-full" src="/img/blog_01.png" alt="">
+                            </div>
+                            <div class="px-1 space-y-2">
+                                   <p class="text-lg font-bold line-clamp-2">
+                                       Earth's intelligence: Being pulled toward the heart of the world
+                                   </p>
+                                   <p class="text-sm line-clamp-3">
+                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veniam autem. Officiis rem 
+                                       adipisci repellendus, dolorum autem, nihil, ad earum vitae ipsum
+                                       repellat voluptatum sint incidunt veniam necessitatibus a 
+                                       placeat vel odit ullam laudantium! Tempore quae amet debitis
+                                       eius impedit voluptatum officiis necessitatibus! Iste aperiam
+                                       facere necessitatibus dicta ab quam.
+                                   </p>
+                                   <p>
+                                       Oct, 4, 2023
+                                   </p>
+                            </div>
+                       </div>
+
+                       <div class="w-full p-2 space-y-4 transition duration-300 transform border-2 rounded-lg shadow-md h-96 hover:cursor-pointer hover:scale-105 hover:border-green-500">
+                        <div class="w-full overflow-hidden rounded h-1/2">
+                               <img class="object-cover w-full h-full" src="/img/blog_01.png" alt="">
+                        </div>
+                        <div class="px-1 space-y-2">
+                               <p class="text-lg font-bold line-clamp-2">
+                                   Earth's intelligence: Being pulled toward the heart of the world
+                               </p>
+                               <p class="text-sm line-clamp-3">
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veniam autem. Officiis rem 
+                                   adipisci repellendus, dolorum autem, nihil, ad earum vitae ipsum
+                                   repellat voluptatum sint incidunt veniam necessitatibus a 
+                                   placeat vel odit ullam laudantium! Tempore quae amet debitis
+                                   eius impedit voluptatum officiis necessitatibus! Iste aperiam
+                                   facere necessitatibus dicta ab quam.
+                               </p>
+                               <p>
+                                   Oct, 4, 2023
+                               </p>
+                        </div>
+                   </div>
+
+                    </div>
+                    </div>
+               </div>
+        </section>
+
+        <!-- ================ Contact Section ==============-->
+
+        <section id="contact-section" class="mb-4">
+             <div class="max-w-6xl px-4 py-8 mx-auto">
+                    <p class="text-4xl font-bold text-center">Contact Us</p>
+
+                    <div class="px-4 py-6">
+                            <div class="mb-3 space-y-1">
+                                 <label for="">Email</label>
+                                 <input type="email" class="w-full px-2 py-2 border-none rounded-full ring-1 focus:ring-2 focus:outline-none ring-green-400" placeholder="example@gmail.com">
+                            </div>
+
+                            <div class="mb-3 space-y-1">
+                                <label for="">Subject</label>
+                                <input type="text" class="w-full px-2 py-2 border-none rounded-full ring-1 focus:ring-2 focus:outline-none ring-green-400" placeholder="Good">
+                            </div>
+
+                            <div class="mb-3 space-y-1">
+                                <label for="">Message</label>
+                                <textarea cols="30" class="w-full px-2 py-2 border-none rounded-md ring-1 focus:ring-2 focus:outline-none ring-green-400" rows="5" placeholder="Your message">
+
+                                </textarea>
+                            </div>
+
+                            <div>
+                                <button class="px-4 py-2 text-white rounded-full bg-gradient-to-r from-green-400 to-green-500" type="submit">Submit</button>
+                            </div>
+                    </div>
+             </div>
+        </section>
+
+        <!-- ================= Footer Section =============-->
+
+        <section id="footer-section" class="bg-gray-900">
+                <div class="max-w-6xl py-8 mx-auto px-14 md:px-8">
+                        <div class="grid grid-cols-1 space-y-8 md:grid-cols-3 md:space-y-0">
+                                <div class="mb-10">
+                                    <p class="text-4xl font-bold text-white">Nature</p>
+                                </div>
+
+                                <div class="space-y-8">
+                                        <p class="text-lg font-bold text-left text-white md:text-2xl">Quick Link</p>
+                                        <ul class="ml-6 space-y-2 text-gray-400 list-disc">
+                                                <li>
+                                                    <a href="" class="transition-all hover:text-green-400">Home</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="transition-all hover:text-green-400">Popular</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="transition-all hover:text-green-400">Latest</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="transition-all hover:text-green-400">About us</a>
+                                                </li>
+                                        </ul>
+                                </div>
+
+                                <div class="space-y-8">
+                                    <p class="text-lg font-bold text-left text-white md:text-2xl">Quick Link</p>
+                                    <ul class="ml-6 space-y-2 text-gray-400 list-disc">
+                                            <li>
+                                                <a href="" class="transition-all hover:text-green-400">Disclaimer</a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="transition-all hover:text-green-400">Privicy Policy</a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="transition-all hover:text-green-400">Term of Use</a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="transition-all hover:text-green-400">Contact us</a>
+                                            </li>
+                                    </ul>
+                            </div>
+                        </div>
+                </div>
+        </section>
+
+
+        <script>
+                const mobile_nav = document.getElementById('mobile_nav');
+                let is_active = false;
+                function toggleMenu(){
+                    is_active = !is_active;
+
+                    if(is_active){
+                        mobile_nav.classList.remove('hidden');
+                        mobile_nav.classList.add('flex');
+                    }else{
+                        mobile_nav.classList.remove('flex');
+                        mobile_nav.classList.add('hidden');
+                    }
+                }
+        </script>
+
+</body>
+</html>
